@@ -4,6 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Satori Soft · Protótipo gratuito do seu software sob medida</title>
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="favicon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -41,7 +44,7 @@
   /* HEADER */
   header {
     position: sticky; top: 0; z-index: 20;
-    background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+    background: #fff;
     border-bottom: 1px solid var(--line);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
@@ -202,18 +205,15 @@
   <header>
     <div class="wrap nav">
       <div class="brand"><img src="satori-logo.png" alt="Satori Soft" /></div>
-      <a href="https://wa.me/5588996869401?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20Satori%20Soft%20e%20quero%20meu%20prot%C3%B3tipo%20gratuito." target="_blank" rel="noopener" class="btn btn-primary header-cta"><span class="cta-full">Quero meu protótipo gratuito</span><span class="cta-short">Protótipo grátis</span></a>
     </div>
   </header>
 
   <!-- 1. REDLINE · callout + promessa + eliminador -->
   <section class="hero">
     <div class="wrap">
-      <span class="callout">Para empresários que não querem contratar no escuro</span>
-      <h1>Veja o sistema sob medida da sua empresa <span class="hl">funcionando na tela</span>, antes de contratar e antes de pagar.</h1>
+      <span class="callout">Para empresários</span>
+      <h1>Sistema sob medida da sua empresa <span class="hl">funcionando na tela</span>, antes de pagar um real.</h1>
       <p class="sub">Com o <b>Método DDD</b>, já colocamos <b>mais de 10 sistemas no ar em até 90 dias</b>. A gente desenha um protótipo do seu, de graça e sem promessa: você navega e decide com clareza se faz sentido seguir.</p>
-      <a href="https://wa.me/5588996869401?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20Satori%20Soft%20e%20quero%20meu%20prot%C3%B3tipo%20gratuito." target="_blank" rel="noopener" class="btn btn-primary btn-lg">Quero meu protótipo gratuito</a>
-      <p class="microcopy">A decisão é sua, com tudo à mostra. Escopo objetivo e resposta rápida.</p>
     </div>
   </section>
 
@@ -352,18 +352,24 @@
   </footer>
 
   <script>
-    // Botão flutuante: acompanha o lead por toda a página, some apenas no topo (onde o CTA do hero já aparece).
+    // Botão flutuante: aparece quando o lead rola até o fim da página (leu a TSL inteira)
+    // e, a partir daí, continua acompanhando a rolagem mesmo que ele volte pra cima.
     (function () {
       var floatCta = document.getElementById('floatCta');
+      var THRESHOLD = 80; // px de folga para considerar "chegou ao fim"
+      var reachedEnd = false;
       function onScroll() {
+        if (reachedEnd) return;
         var scrolled = window.scrollY || document.documentElement.scrollTop;
-        if (scrolled > 360) {
+        var viewport = window.innerHeight;
+        var docHeight = document.documentElement.scrollHeight;
+        if (scrolled + viewport >= docHeight - THRESHOLD) {
+          reachedEnd = true;
           floatCta.classList.add('show');
-        } else {
-          floatCta.classList.remove('show');
         }
       }
       window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
       onScroll();
     })();
   </script>
