@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Satori Soft · Protótipo gratuito do seu software sob medida</title>
-<meta name="description" content="Sistema sob medida da sua empresa funcionando na tela, antes de pagar um real. Com o Método DDD, mais de 20 sistemas no ar em até 90 dias." />
+<meta name="description" content="Sistema sob medida da sua empresa funcionando na tela, antes de pagar um real. Com o Método DDD, seu sistema no ar em até 90 dias." />
 <link rel="icon" href="favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32" />
 <link rel="apple-touch-icon" href="favicon-180.png" />
@@ -221,10 +221,10 @@
   footer .row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
   footer .logo .wordmark { color: #fff; }
   footer .soft { color: var(--dim); }
-  footer nav { display: flex; flex-wrap: wrap; gap: 28px; }
-  footer nav a { font-size: 14px; color: var(--dim); text-decoration: none; }
-  footer nav a:hover { color: #fff; }
-  footer .copy { font-size: 13px; line-height: 1.62; color: var(--dim); padding-top: 28px; }
+  .foot-tagline { max-width: 420px; font-size: 14px; line-height: 1.6; color: var(--dim); }
+  footer .copy { font-size: 13px; line-height: 1.8; color: var(--dim); padding-top: 28px; }
+  footer .copy a { color: #D4D4D8; text-decoration: none; }
+  footer .copy a:hover { color: #fff; text-decoration: underline; }
 
   .progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
   .progress span { display: block; height: 100%; background: var(--orange); transform-origin: 0 50%; transform: scaleX(0); will-change: transform; }
@@ -330,7 +330,7 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
   <section class="hero">
     <span class="eyebrow"><svg class="ic"><use href="#i-badge-check"/></svg>Para empresários</span>
     <h1 class="h1">Sistema sob medida da sua empresa <br />funcionando na tela, <span class="accent">antes</span> <br /><span class="accent">de pagar um real.</span></h1>
-    <p class="sub">Com o Método DDD, já colocamos mais de 20 sistemas no ar em até 90 dias. A gente desenha um protótipo do seu, de graça e sem promessa: você navega e decide com clareza se faz sentido seguir.</p>
+    <p class="sub">Com o Método DDD seu sistema no ar em até 90 dias. A gente desenha um protótipo de graça. Você usa e decide com clareza se faz sentido seguir.</p>
     <ul class="hero-points">
       <li><svg class="ic"><use href="#i-circle-check"/></svg>Protótipo antes do contrato</li>
       <li><svg class="ic"><use href="#i-circle-check"/></svg>Escopo e preço fechados</li>
@@ -342,14 +342,14 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
     <div class="wrap sec" style="gap:56px">
       <div class="sec-head narrow">
         <span class="eyebrow">SE ISSO SOA FAMILIAR</span>
-        <h2 class="h2">Você pagou adiantado e, meses depois, ainda não viu o sistema funcionando de verdade</h2>
+        <h2 class="h2">Você pagou um software personalizado adiantado e, meses depois, não viu o sistema funcionando de verdade</h2>
         <p class="lead">É quase sempre a mesma sequência. E ela começa muito antes de o software ficar pronto.</p>
       </div>
       <div class="cards">
         <article class="card">
           <span class="icon-box"><svg class="ic"><use href="#i-calendar-x"/></svg></span>
-          <h3>O prazo estica</h3>
-          <p>Primeiro a data combinada escorrega, e o orçamento muda no meio do caminho. Cada semana a mais vira custo seu, não de quem está desenvolvendo.</p>
+          <h3>O prazo se estende</h3>
+          <p>Primeiro a data combinada não é cumprida, e o orçamento muda no meio do caminho. Cada semana a mais vira custo seu, não de quem está desenvolvendo.</p>
         </article>
         <article class="card">
           <span class="icon-box"><svg class="ic"><use href="#i-rotate-ccw"/></svg></span>
@@ -371,8 +371,8 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
         <p class="opening">E não, a culpa não é sua.</p>
         <p class="p">Desde o nosso primeiro projeto, quase todo cliente chegou até aqui depois de cair na mesma armadilha: contratar software no escuro, sem ver nada funcionando antes de pagar.</p>
         <p class="p">Você aprova um orçamento em cima de uma proposta em PDF, paga adiantado e espera meses só para descobrir se o que está sendo construído é mesmo o que a sua empresa precisava.</p>
-        <p class="p">Depois de mais de 20 sistemas entregues, entendemos que o problema quase nunca é técnico. É falta de clareza.</p>
-        <p class="strong">Foi daí que nasceu o nosso método: mostrar antes de prometer.</p>
+        <p class="p">Depois de dezenas de projetos entregues, entendemos que o problema quase nunca é técnico. É falta de clareza.</p>
+        <p class="strong">Foi daí que nasceu o nosso método: mostrar antes de tentar vender.</p>
         <p class="p">Em vez de pedir que você confie numa promessa, a gente desenha o seu sistema primeiro, com telas reais e navegáveis, e só depois fala de contrato.</p>
         <blockquote class="pull"><p>Você não deveria precisar pagar para descobrir se contratou a empresa certa.</p></blockquote>
         <p class="p">É por isso que o protótipo vem antes do orçamento, e não depois dele: você navega pelas telas principais, entende exatamente o que vai receber e decide com tudo à mostra.</p>
@@ -384,7 +384,7 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
     <div class="wrap sec" style="gap:56px">
       <div class="sec-head narrow">
         <h2 class="h2">O que a gente já entregou</h2>
-        <p class="lead">Já são mais de 20 projetos no ar, em setores que vão de indústria e saúde a varejo e serviços. Em quase todos, a empresa chegou até nós depois de uma experiência frustrante, e o que virou o jogo foi simples: mostrar, em vez de prometer.</p>
+        <p class="lead">Já são dezenas de projetos no ar, em setores que vão de indústria e saúde a varejo e serviços. Em quase todos, a empresa chegou até nós depois de uma experiência frustrante, e o que virou o jogo foi simples: mostrar, em vez de prometer.</p>
         <p class="p">Você acompanha cada etapa, navega no que foi construído e só aprova o que realmente funciona. Progresso que se vê, não que se promete.</p>
       </div>
       <div class="metrics">
@@ -501,19 +501,19 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
           <summary>O protótipo é gratuito mesmo? Qual é a pegadinha?<svg class="ic"><use href="#i-minus"/></svg></summary>
           <p class="a">Não há pegadinha. A gente desenha as telas principais do seu sistema e apresenta o escopo e o preço fechados. Se fizer sentido, começamos; se não, o protótipo e o escopo são seus para levar, sem custo e sem cobrança.</p>
         </details>
-        <details>
+        <details open>
           <summary>Em quanto tempo eu tenho o sistema no ar?<svg class="ic"><use href="#i-minus"/></svg></summary>
           <p class="a">Os nossos projetos entram em produção em até 90 dias. Durante a construção, você vê o software rodando a cada ciclo, e não um relatório de horas.</p>
         </details>
-        <details>
+        <details open>
           <summary>E se o escopo mudar no meio do caminho?<svg class="ic"><use href="#i-minus"/></svg></summary>
           <p class="a">O que está assinado é o que vale, e o preço combinado não muda. Qualquer coisa nova entra como um item separado, com prazo e valor definidos antes de qualquer execução.</p>
         </details>
-        <details>
+        <details open>
           <summary>O sistema é meu ou eu fico preso a vocês?<svg class="ic"><use href="#i-minus"/></svg></summary>
           <p class="a">O código é seu, documentado e entregue. Você contrata a Satori Soft uma única vez e fica com o ativo: sem amarra, sem aluguel disfarçado e sem depender da gente para continuar.</p>
         </details>
-        <details>
+        <details open>
           <summary>Que tipo de empresa vocês atendem?<svg class="ic"><use href="#i-minus"/></svg></summary>
           <p class="a">Já entregamos projetos em indústria, saúde, varejo, serviços e logística. O critério não é o setor, é ter um processo claro para resolver. Projetos maiores ou com integrações complexas passam por uma reunião de levantamento antes.</p>
         </details>
@@ -544,14 +544,9 @@ src="https://www.facebook.com/tr?id=28043747658581988&ev=PageView&noscript=1" />
         <span class="wordmark">sator<span class="i"><span class="dot"></span><span class="stem">ı</span></span></span>
         <span class="soft">SOFT</span>
       </a>
-      <nav>
-        <a href="#top">Como funciona</a>
-        <a href="#top">Cases</a>
-        <a href="https://wa.me/5588996869401" target="_blank" rel="noopener">Contato</a>
-        <a href="#top">Política de privacidade</a>
-      </nav>
+      <p class="foot-tagline">Sistemas web sob medida que funcionam de verdade. No ar em até 90 dias.</p>
     </div>
-    <p class="copy">© 2026 Satori Soft · Sistemas sob medida com o Método DDD · Este site não é afiliado ao Facebook ou Google.</p>
+    <p class="copy"><a href="mailto:helio@satorisoft.com.br">helio@satorisoft.com.br</a> · <a href="https://satorisoft.com.br">satorisoft.com.br</a><br />Satori Soft · CNPJ 57.575.975/0001-65</p>
   </div>
 </footer>
 
