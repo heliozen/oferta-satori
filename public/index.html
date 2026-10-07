@@ -217,7 +217,8 @@
   .closing .btn { align-self: center; }
   .closing p { font-family: "Poppins", system-ui, sans-serif; font-size: clamp(24px, 3vw, 32px); font-weight: 600; line-height: 1.31; letter-spacing: -0.031em; color: var(--ink); }
 
-  footer { background: var(--panel-bg); padding: 48px var(--pad-x); }
+  /* o fim do rodapé reserva a altura do botão flutuante, para ele não cobrir contato e CNPJ */
+  footer { background: var(--panel-bg); padding: 48px var(--pad-x) calc(48px + 88px + env(safe-area-inset-bottom)); }
   footer .row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
   footer .logo .wordmark { color: #fff; }
   footer .soft { color: var(--dim); }
@@ -228,9 +229,9 @@
 
   .progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
   .progress span { display: block; height: 100%; background: var(--orange); transform-origin: 0 50%; transform: scaleX(0); will-change: transform; }
-  .float { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px var(--pad-x) calc(14px + env(safe-area-inset-bottom)); background: rgba(22, 22, 26, 0.96); backdrop-filter: blur(8px); transform: translateY(110%); transition: transform 0.28s ease; z-index: 60; }
+  .float { position: fixed; left: 0; right: 0; bottom: 0; padding: 0 var(--pad-x) calc(20px + env(safe-area-inset-bottom)); pointer-events: none; transform: translateY(140%); transition: transform 0.28s ease; z-index: 60; }
   .float.show { transform: translateY(0); }
-  .float .btn { display: flex; justify-content: center; width: 100%; max-width: 520px; margin: 0 auto; padding: 16px 28px; font-size: 16px; }
+  .float .btn { display: flex; justify-content: center; width: 100%; max-width: 520px; margin: 0 auto; padding: 16px 28px; font-size: 16px; pointer-events: auto; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.16); }
 
   @media (min-width: 900px) {
     .h1 br { display: inline; }
